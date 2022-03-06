@@ -22,5 +22,5 @@ function App() {
   );
 }
 
-/* comment */
+/* this is a test comment */
 export default App;

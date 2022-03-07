@@ -1,6 +1,6 @@
 import Home from "./Home";
 import NavBar from "./NavBar";
-import Platform from "./Platform";
+import About from "./About";
 import Preorder from "./Preorder";
 import Watchlist from "./Watchlist";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -21,8 +21,8 @@ function App() {
       <Route exact path="/preorder">
         <Preorder />
       </Route>
-      <Route exact path="/platform">
-        <Platform />
+      <Route exact path="/About">
+        <About />
       </Route>
       
     </Switch>

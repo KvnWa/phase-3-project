@@ -12,7 +12,7 @@ const NavBar = () => {
     <>
     <AppBar style={{background: '#063970'}}>
         <Toolbar>
-            <Typography>Logo</Typography>
+            <Typography to='/' component={Link}>Logo</Typography>
             <ShoppingCartIcon></ShoppingCartIcon>
             <Tabs style={{marginLeft: 'auto'}} textColor="inherit" value={value} onChange={(e, value)=> setValue(value)} indicatorColor="primary">
                 <Tab label="Watchlist" to='/watchlist' component={Link}></Tab>

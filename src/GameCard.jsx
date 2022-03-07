@@ -25,12 +25,15 @@ function GameCard() {
 
 
   return (
-    <li className="card">
+    <ul className="card">
       <img src={gamesarray.games[0].image} alt={gamesarray.games[0].title} />
       <h4>{gamesarray.games[0].title}</h4>
+      <p>{gamesarray.games[0].genre}</p>
+      <p>{gamesarray.games[0].release_date}</p>
+      <p>{gamesarray.games[0].platform}</p>
       <p>Price: {gamesarray.games[0].price}</p>
         {/* <button className={stock ? "primary" : ""} onClick={handleClick}>{stock ? "In stock" : "Out of Stock"}</button> */}
-    </li>
+    </ul>
   );
 }
 

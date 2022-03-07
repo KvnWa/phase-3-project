@@ -1,7 +1,7 @@
 import Home from "./Home";
 import NavBar from "./NavBar";
 import About from "./About";
-import Preorder from "./Preorder";
+import FAQ from "./FAQ";
 import Watchlist from "./Watchlist";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -18,8 +18,8 @@ function App() {
       <Route exact path="/watchlist">
         <Watchlist />
       </Route>
-      <Route exact path="/preorder">
-        <Preorder />
+      <Route exact path="/FAQ">
+        <FAQ />
       </Route>
       <Route exact path="/About">
         <About />

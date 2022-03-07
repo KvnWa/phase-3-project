@@ -1,8 +1,11 @@
 import React from 'react'
+import GameCard from './GameCard';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+    <GameCard></GameCard>
+    </div>
   )
 }
 

@@ -2,6 +2,7 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import About from "./About";
 import FAQ from "./FAQ";
+import GameCard from "./GameCard";
 import Watchlist from "./Watchlist";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

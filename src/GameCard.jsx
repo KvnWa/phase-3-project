@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import grat7 from "./image/grat7.jpeg"
+import './App.css';
 
 
 
@@ -669,22 +671,64 @@ function GameCard() {
     ],
   }
 
-//   function handleClick() {
-//     setStock(stock => !stock)
-//   }
+  //   function handleClick() {
+  //     setStock(stock => !stock)
+  //   }
 
 
-return (
-  <ul className="card">
-    <img src={gamesarray.games[4].image} alt={gamesarray.games[0].title} />
-    <h4>{gamesarray.games[0].title}</h4>
-    <p>{gamesarray.games[0].genre}</p>
-    <p>{gamesarray.games[0].release_date}</p>
-    <p>{gamesarray.games[0].platform}</p>
-    <p>Price: {gamesarray.games[0].price}</p>
-    {/* <button className={stock ? "primary" : ""} onClick={handleClick}>{stock ? "In stock" : "Out of Stock"}</button> */}
-  </ul>
-);
+  return (
+    <div className="wrapper">
+      <div className='container'>
+        <ul className="card">
+          <img src={grat7} alt={gamesarray.games[0].title} />
+          <h4>{gamesarray.games[0].title}</h4>
+          <p>{gamesarray.games[0].release_date}</p>
+          <p>{gamesarray.games[0].platform}</p>
+          <p>Price: {gamesarray.games[0].price}</p>
+        </ul>
+        <ul className="card">
+          <img src={grat7} alt={gamesarray.games[0].title} />
+          <h4>{gamesarray.games[0].title}</h4>
+        
+          <p>{gamesarray.games[0].release_date}</p>
+          <p>{gamesarray.games[0].platform}</p>
+          <p>Price: {gamesarray.games[0].price}</p>
+        </ul>
+        <ul className="card">
+          <img src={grat7} alt={gamesarray.games[0].title} />
+          <h4>{gamesarray.games[0].title}</h4>
+       
+          <p>{gamesarray.games[0].release_date}</p>
+          <p>{gamesarray.games[0].platform}</p>
+          <p>Price: {gamesarray.games[0].price}</p>
+        </ul>
+        <ul className="card">
+          <img src={grat7} alt={gamesarray.games[0].title} />
+          <h4>{gamesarray.games[0].title}</h4>
+      
+          <p>{gamesarray.games[0].release_date}</p>
+          <p>{gamesarray.games[0].platform}</p>
+          <p>Price: {gamesarray.games[0].price}</p>
+        </ul>
+        <ul className="card">
+          <img src={grat7} alt={gamesarray.games[0].title} />
+          <h4>{gamesarray.games[0].title}</h4>
+   
+          <p>{gamesarray.games[0].release_date}</p>
+          <p>{gamesarray.games[0].platform}</p>
+          <p>Price: {gamesarray.games[0].price}</p>
+        </ul>
+        <ul className="card">
+          <img src={grat7} alt={gamesarray.games[0].title} />
+          <h4>{gamesarray.games[0].title}</h4>
+
+          <p>{gamesarray.games[0].release_date}</p>
+          <p>{gamesarray.games[0].platform}</p>
+          <p>Price: {gamesarray.games[0].price}</p>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default GameCard;

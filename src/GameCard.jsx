@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import grat7 from "./image/grat7.jpeg"
+import grat7 from "./image/grat7.jpeg";
+import Button from '@mui/material/Button';
 import './App.css';
 
 
@@ -685,46 +686,47 @@ function GameCard() {
           <p>{gamesarray.games[0].release_date}</p>
           <p>{gamesarray.games[0].platform}</p>
           <p>Price: {gamesarray.games[0].price}</p>
+          <Button variant="contained">+ Watchlist</Button>
         </ul>
         <ul className="card">
           <img src={grat7} alt={gamesarray.games[0].title} />
           <h4>{gamesarray.games[0].title}</h4>
-        
           <p>{gamesarray.games[0].release_date}</p>
           <p>{gamesarray.games[0].platform}</p>
           <p>Price: {gamesarray.games[0].price}</p>
+          <Button variant="contained">+ Watchlist</Button>
         </ul>
         <ul className="card">
           <img src={grat7} alt={gamesarray.games[0].title} />
           <h4>{gamesarray.games[0].title}</h4>
-       
           <p>{gamesarray.games[0].release_date}</p>
           <p>{gamesarray.games[0].platform}</p>
           <p>Price: {gamesarray.games[0].price}</p>
+          <Button variant="contained">+ Watchlist</Button>
         </ul>
         <ul className="card">
           <img src={grat7} alt={gamesarray.games[0].title} />
           <h4>{gamesarray.games[0].title}</h4>
-      
           <p>{gamesarray.games[0].release_date}</p>
           <p>{gamesarray.games[0].platform}</p>
           <p>Price: {gamesarray.games[0].price}</p>
+          <Button variant="contained">+ Watchlist</Button>
         </ul>
         <ul className="card">
           <img src={grat7} alt={gamesarray.games[0].title} />
           <h4>{gamesarray.games[0].title}</h4>
-   
           <p>{gamesarray.games[0].release_date}</p>
           <p>{gamesarray.games[0].platform}</p>
           <p>Price: {gamesarray.games[0].price}</p>
+          <Button variant="contained">+ Watchlist</Button>
         </ul>
         <ul className="card">
           <img src={grat7} alt={gamesarray.games[0].title} />
           <h4>{gamesarray.games[0].title}</h4>
-
           <p>{gamesarray.games[0].release_date}</p>
           <p>{gamesarray.games[0].platform}</p>
           <p>Price: {gamesarray.games[0].price}</p>
+          <Button variant="contained">+ Watchlist</Button>
         </ul>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import gameimage1 from '../public/image/gameimage1.png';
+
+
 
 function GameCard() {
 
@@ -675,7 +676,7 @@ function GameCard() {
 
 return (
   <ul className="card">
-    <img src={gamesarray.games[0].image} alt={gamesarray.games[0].title} />
+    <img src={gamesarray.games[4].image} alt={gamesarray.games[0].title} />
     <h4>{gamesarray.games[0].title}</h4>
     <p>{gamesarray.games[0].genre}</p>
     <p>{gamesarray.games[0].release_date}</p>

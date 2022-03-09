@@ -5,15 +5,14 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [value, setValue] = useState();
-
+  
   return (
     <div className="nav">
-      <AppBar style={{ background: '#063970' }}>
+      <AppBar style={{ background: '#2A2A2A' }}>
         <Toolbar>
           <Typography to="/" component={Link}>
-            Logo
+            Forged
           </Typography>
-          <ShoppingCartIcon></ShoppingCartIcon>
           <Tabs
             style={{ marginLeft: 'auto' }}
             textColor="inherit"
@@ -25,8 +24,7 @@ const NavBar = () => {
             <Tab label="FAQ" to="/FAQ" component={Link}></Tab>
             <Tab label="About" to="/About" component={Link}></Tab>
           </Tabs>
-          <Button style={{ marginLeft: 'auto' }} variant="contained">
-            Login
+          <Button style={{ marginLeft: 'auto' }} variant="contained" >Login
           </Button>
           <Button style={{ marginLeft: '10px' }} variant="contained">
             Sign Up

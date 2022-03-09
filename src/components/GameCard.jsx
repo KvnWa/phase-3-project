@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function GameCard({ game, isWatchlist, handleButtonClick }) {
   const { id, title, releaseDate, image, platform, price } = game;
@@ -33,11 +34,13 @@ function GameCard({ game, isWatchlist, handleButtonClick }) {
       <p>{releaseDate}</p>
       <p>{platform}</p>
       <p>Price: {price}</p>
-      <Link to={`/games/${id}`}>View details</Link>
+      <Button variant="outlined"><Link to={`/games/${id}`}>View details</Link></Button>
+      <br></br>
+      <br></br>
       {isWatchlist ? (
-        <button onClick={handleRemoveClick}>Remove</button>
+        <Button variant="contained" onClick={handleRemoveClick}>Remove</Button>
       ) : (
-        <button onClick={handleAddClick}>Add</button>
+        <Button variant="contained" onClick={handleAddClick}>Add</Button>
       )}
     </div>
   );

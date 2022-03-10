@@ -76,6 +76,7 @@ img {
     margin: 5em auto;
     height: 360px;
     width: 800px;
+    margin-top: 350px;
     
     
   }
@@ -159,7 +160,7 @@ img {
     background: #1a66ff;}
   
   .btn span {
-    font-family: 'Farsan', cursive;
+    font-family: 'Farsan';
     transition: transform 0.3s;
     display: inline-block;
     padding: 10px 20px;

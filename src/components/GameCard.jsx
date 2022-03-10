@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 
 function GameCard({ game, isWatchlist, handleButtonClick }) {
   const { id, title, releaseDate, image, platform, price } = game;
@@ -34,13 +35,13 @@ function GameCard({ game, isWatchlist, handleButtonClick }) {
       <p>{releaseDate}</p>
       <p>{platform}</p>
       <p>Price: {price}</p>
-      <Button variant="outlined"><Link to={`/games/${id}`}>View details</Link></Button>
+      <Button variant="outlined"><Link style={{textDecoration: 'none', color: "black"}} to={`/games/${id}`}>View details</Link></Button>
       <br></br>
       <br></br>
       {isWatchlist ? (
         <Button variant="contained" onClick={handleRemoveClick}>Remove</Button>
       ) : (
-        <Button variant="contained" onClick={handleAddClick}>Add</Button>
+        <Button variant="contained" onClick={handleAddClick}><AddCircleOutlineRoundedIcon /></Button>
       )}
     </div>
   );

@@ -15,7 +15,7 @@ function GameList() {
     fetchData();
   };
   return (
-    <div className="container">
+    <div className="wrapper">
       {games.map((game) => (
         <GameCard
           key={game.id}

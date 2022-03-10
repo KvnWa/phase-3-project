@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Image } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 
 function GameCard({ game, isWatchlist, handleButtonClick }) {
   const { id, title, releaseDate, image, platform, price } = game;
 
-  const handleAddClick = () => {
+  const handleAddClick = (e) => {
     fetch('http://localhost:3001/watchlist', {
       method: 'POST',
       headers: {
@@ -16,6 +17,7 @@ function GameCard({ game, isWatchlist, handleButtonClick }) {
         game_id: game.id,
       }),
     }).then((r) => r.json());
+    e.stopPropagation();
 
     handleButtonClick(game.id);
   };
@@ -28,22 +30,38 @@ function GameCard({ game, isWatchlist, handleButtonClick }) {
     handleButtonClick(game.id);
   };
 
+  function handleImageClick() {
+    <Link to={`/games/${id}`} />
+    console.log("tgadasd")
+  }
+
   return (
-    <div className="card">
-      <img src={image} alt={title} />
-      <h4>{title}</h4>
-      <p>{releaseDate}</p>
-      <p>{platform}</p>
-      <p>Price: {price}</p>
-      <Button variant="outlined"><Link style={{textDecoration: 'none', color: "black"}} to={`/games/${id}`}>View details</Link></Button>
-      <br></br>
-      <br></br>
-      {isWatchlist ? (
-        <Button variant="contained" onClick={handleRemoveClick}>Remove</Button>
-      ) : (
-        <Button variant="contained" onClick={handleAddClick}><AddCircleOutlineRoundedIcon /></Button>
-      )}
-    </div>
+    <div >
+
+      <div className="cards">
+        <figure className="card">
+          <div>
+            <Link style={{ textDecoration: 'none', color: "black" }} to={`/games/${id}`}>
+              <img src={image} alt={title} onClick={handleImageClick} />
+            </Link>
+            <figcaption className="title1">{title}</figcaption>
+            <p>{releaseDate}</p>
+            <p>{platform}</p>
+            <p>Price: {price}</p>
+            {/* <Button variant="outlined">View details</Button> */}
+            <br></br>
+            <br></br>
+          </div>
+          <div>
+            {isWatchlist ? (
+            <figcaption>  <Button variant="contained" className='btn1'style={{width: '.5px', backgroundColor: "#DC143C" }} onClick={handleRemoveClick}><RemoveOutlinedIcon /></Button> </figcaption>
+            ) : (
+              <figcaption> <Button variant="contained" className='btn1' onClick={handleAddClick}><AddCircleOutlineRoundedIcon /></Button></figcaption>
+            )}
+          </div>
+        </figure>
+      </div>
+    </div >
   );
 }
 

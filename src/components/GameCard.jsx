@@ -30,10 +30,6 @@ function GameCard({ game, isWatchlist, handleButtonClick }) {
     handleButtonClick(game.id);
   };
 
-  function handleImageClick() {
-    <Link to={`/games/${id}`} />
-    console.log("tgadasd")
-  }
 
   return (
     <div >
@@ -42,7 +38,7 @@ function GameCard({ game, isWatchlist, handleButtonClick }) {
         <figure className="card">
           <div>
             <Link style={{ textDecoration: 'none', color: "black" }} to={`/games/${id}`}>
-              <img src={image} alt={title} onClick={handleImageClick} />
+              <img src={image} alt={title} />
             </Link>
             <figcaption className="title1">{title}</figcaption>
             <p>{releaseDate}</p>

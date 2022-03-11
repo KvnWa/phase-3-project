@@ -18,7 +18,7 @@ const NavBar = () => {
         <Toolbar>
           
           <Typography to="/" component={Link}>
-          <img src={forged} height="70" width="90%" style={{marginLeft: "60px"}}/>
+          <img src={forged} height="70" width="85%" style={{marginLeft: "60px"}}/>
           </Typography>
           <Tabs
             style={{ marginLeft: 'auto' }}
